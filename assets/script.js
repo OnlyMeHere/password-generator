@@ -8,11 +8,22 @@ const special = ["!","#","$","%","^","&","*","(",")","_","-","?"]
 // When I click the button to Generate Password, I'm presented with a 
 // series of Prompts for Password criteria
 
-var generateBtn = document.querySelector("#generate");
+function waitForClick() {
+  if .btn.addEventListener("click", writePassword());
+    console.log("button was clicked");
+  else {
+    console.log("no click yet...")
+    return;
+  }
+
+}
+
+// var button = document.querySelector("#generate");
 
 // Then a Prompt askes for what length the password should be
 // between the limits of ( at least 8 no more than 128 characters )
 
+// Add event listener to generate button
 
 
 //  Then a Prompt asks for character types to include in the password
@@ -27,27 +38,71 @@ var generateBtn = document.querySelector("#generate");
 // Then the password is generated and displayed in an alert of written to the page
 
 
-
+// var passwordText = document.querySelector("#password");
+// var password = generatePassword();
+// passwordText.value = password;
 
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+function writePassword() {
+    var inputchar = prompt("Please enter the number of charactors you want in your password ( Minimum 8, Maximum 128 ) ")
+    console.log("button works! user entered: " + (inputchar));
+    if inputchar < 8 || inputchar > 128 {
+      alert ("Number of charactures must be between 8 and 128");
+      return: writePassword();
+      else {
+        criteriaGaunlet();
+      }
+    }
+}
+
+funtion criteriaGauntlet() {
+
+  var lwrcase = confirm("use lower case letters in your password?");
+  var uprcase = confrim("Use upper case letters in your password?");
+  var numcase = confirm("Use numaric values in your password?");
+  var spccase = confirm("Use special case charators in your password?");
+  
+}
+
+// function generatePassword() {
+
+function passWordGenArrayMaker(){
+
+  if lwrcase = true {
+    finalPassGen = finalPassGen + lowerc;
+  }else {
+    finalPassGen = 0
+  }
+  if uprcase = true {
+    finalPassGen = finalPassGen + upperc:
+  }else {
+    finalPassGen = finalPassGen;
+  }
+  if numcase = true {
+    finalPassGen = finalPassGen + numbers;
+  }else {
+    finalPassGen = finalPassGen;
+  }
+  if spccase = true {
+    finalPassGen = finalPassGen = special;
+  }else {
+    finalPassGen = finalPassGen
+  }
+
+
 
 }
 
-function generatePassword() {
+
+
+
 
     
 
 
-}
 
 
 
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
