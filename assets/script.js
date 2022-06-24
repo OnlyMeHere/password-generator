@@ -7,14 +7,12 @@ const special = ["!","#","$","%","^","&","*","(",")","_","-","?"]
 
 // When I click the button to Generate Password, I'm presented with a 
 // series of Prompts for Password criteria
+var btn = document.getElementById(generate);
+
 
 function waitForClick() {
-  if .btn.addEventListener("click", writePassword());
+  if (btn.addEventListener("click", writePassword()));
     console.log("button was clicked");
-  else {
-    console.log("no click yet...")
-    return;
-  }
 
 }
 
@@ -48,7 +46,7 @@ function waitForClick() {
 function writePassword() {
     var inputchar = prompt("Please enter the number of charactors you want in your password ( Minimum 8, Maximum 128 ) ")
     console.log("button works! user entered: " + (inputchar));
-    if inputchar < 8 || inputchar > 128 {
+    if (inputchar < 8) || (inputchar > 128) {
       alert ("Number of charactures must be between 8 and 128");
       return: writePassword();
       else {
@@ -57,7 +55,7 @@ function writePassword() {
     }
 }
 
-funtion criteriaGauntlet() {
+function criteriaGauntlet() {
 
   var lwrcase = confirm("use lower case letters in your password?");
   var uprcase = confrim("Use upper case letters in your password?");
@@ -72,26 +70,31 @@ function passWordGenArrayMaker(){
 
   if lwrcase = true {
     finalPassGen = finalPassGen + lowerc;
-  }else {
+  }else if {
     finalPassGen = 0
   }
   if uprcase = true {
     finalPassGen = finalPassGen + upperc:
-  }else {
+  }else if {
     finalPassGen = finalPassGen;
   }
   if numcase = true {
     finalPassGen = finalPassGen + numbers;
-  }else {
+  }else if {
     finalPassGen = finalPassGen;
   }
   if spccase = true {
     finalPassGen = finalPassGen = special;
   }else {
-    finalPassGen = finalPassGen
+    finalPassGen = finalPassGen;
   }
 
+  for i = 0; i <= inputchar.length ; i++;{
 
+    #password = finalPassGen + (math.floor(math.random()) * (inputchar));
+
+  }return: #password;
+    
 
 }
 
