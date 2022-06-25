@@ -5,7 +5,7 @@ const upperc = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
 const numbers = ["1","2","3","4","5","6","6","7","8","9","0"]
 const special = ["!","#","$","%","^","&","*","(",")","_","-","?"]
 var finalPassGen = [];
-var password = 0;
+var password = "";
 var inputChar = 0;
 
 
@@ -18,14 +18,17 @@ generateBtn.addEventListener("click", userInput);
 
 // Write password to the #password input
 
-function writePassword() {
-     password = generatePassword();
+function writePassword(password) {
  var passwordText = document.querySelector("#password");
  passwordText.value = password;
 }
+function getRandomInt(max) {
+ var randomInt = Math.floor(max*Math.random());
+  return randomInt;
+}
 
 function userInput() {
-  var inputChar = prompt("How may characture would you like in your password?");
+      inputChar = prompt("How may characture would you like in your password?");
   if (inputChar >= 8 && inputChar <= 127) {
     generatePassword();
   } else {
@@ -35,6 +38,7 @@ function userInput() {
 
 
 function generatePassword() {
+
   var lwrcase = confirm("use lower case letters in your password?");
   if (lwrcase === true) {
     finalPassGen = finalPassGen + lowerc;
@@ -64,15 +68,13 @@ function generatePassword() {
 
   for (let i = 0; i <= (inputChar.length) ; i++) {
 
-    slice = getRandomInt(finalPassGen.length);
-
-    password = finalPassGen.slice(slice) + password;
+    password = finalPassWordGen[Math.floor(Math.random()*inputChar.length)] + password;
 
     console.log(password);
 
   }
     
-  
+  writePassword(password);
 }
 
 
