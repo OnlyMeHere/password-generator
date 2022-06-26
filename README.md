@@ -3,8 +3,6 @@
 
 This site was created to serve an emplyees need to generate a strong password. It works in the browser and can accommodate various criteria that secure password requires.
 
-My appologies that it doesn't work properly right now. I will update it in the near future. When it's up and running you will be able to generate a secure password here. And who doesn't need a secure password? We all do.
-
 
 ## Technologies Used:
 
